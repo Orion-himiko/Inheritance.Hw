@@ -1,0 +1,32 @@
+<html>
+    <head>
+    </head>
+
+    <body>
+        <h1>Inheritance</h1>
+        
+        <script>
+            class Series{
+                constructor(title) {
+                    this.seriesname = title;
+                }
+                present(){
+                    return this.seriesname+' is my favourite series ';
+                }
+            }
+
+            class App extends Series {
+                constructor(title, app){
+                    super(title);
+                    this.app = app;
+                }
+                show(){
+                    return this.present()+ 'it is on '+ this.app;
+                }
+            }
+
+            let myFavSeries = new App('House',"Netflix")
+            document.write(myFavSeries.show())
+        </script>
+    </body>
+</html>
